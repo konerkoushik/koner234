@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+        /* Navigation bar */
+        
+        #navbar {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+        
+        #navbar::before {
+            content: "";
+            width: 100%;
+            height: 95%;
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            opacity: 0.5;
+        }
+        
+        #logo {
+            margin: 10px 20px;
+        }
+        
+        #logo img {
+            height: 60px;
+            margin: 4px 2px;
+        }
+        
+        #navbar ul {
+            display: flex;
+        }
+        
+        #navbar ul li {
+            list-style-type: none;
+            font-size: 20px;
+        }
+        
+        #navbar ul li a {
+            color: white;
+            display: block;
+            padding: 2px 15px;
+            text-decoration: none;
+        }
+        
+        #navbar ul li a:hover {
+            background-color: rgb(100, 100, 100);
+            display: block;
+            padding: 2px 20px;
+            border-radius: 20px;
+        }
+        
+        #navbar .bt {
+            position: absolute;
+            right: 10px;
+        }
+        
+        #navbar .btn {
+            margin: 0px 5px;
+            padding: 5px 8px;
+            background-color: black;
+            color: chartreuse;
+            cursor: pointer;
+        }
+        
+        #navbar .btn a {
+            text-decoration: none;
+            color: chartreuse;
+        }
+        /* Section Bar */
+        
+        #home {
+            display: flex;
+            flex-direction: column;
+            height: 237PX;
+            padding: 2px 40px;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        #home::before {
+            content: "";
+            width: 100%;
+            height: 304px;
+            background-color: black;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            z-index: -1;
+            opacity: 0.8;
+        }
+        
+        #home h1 {
+            text-align: center;
+            color: white;
+            font-size: 50px;
+            padding: 4px;
+        }
+        
+        #home p {
+            text-align: center;
+            color: white;
+            padding: 4px 5px;
+            font-size: 20px;
+        }
+        
+        #home .homebt {
+            padding: 4px 24px;
+            margin: 5px 5px;
+            border: 1px solid white;
+            background-color: black;
+            color: red;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        
+        #home .homebt a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        #service {
+            margin: 30px;
+            display: flex;
+        }
+        
+        #service .box {
+            border: 2px solid #e30303;
+            padding: 30px;
+            margin: 2px 6px;
+            border-radius: 20px;
+            background-color: #c9c9c9;
+        }
+        
+        #service .box img {
+            display: block;
+            margin: auto;
+            height: 100px;
+        }
+        
+        #client-section {
+            position: relative;
+        }
+        
+        #client-section h1 {
+            padding: 20px 0px;
+        }
+        
+        #clients {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .item {
+            padding: 28px;
+        }
+        
+        #clients img {
+            height: 100px;
+        }
+        
+        #contact {
+            height: 400px;
+        }
+        
+        #contact h1 {
+            padding: 26px 0px;
+        }
+        
+        #contact-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        
+        #contact-box label {
+            text-align: center;
+            font-size: 20px;
+        }
+        
+        #contact-box input {
+            display: flex;
+            flex-direction: column;
+            width: 250px;
+            padding: 8px;
+            margin: 15px auto;
+        }
+        
+        #contact-box .sb {
+            padding: 5px 8px;
+            background-color: tomato;
+            color: white;
+            cursor: pointer;
+        }
+        
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px;
+            background-color: rgb(8, 8, 27);
+            color: white;
+        }
+        
+        footer p {
+            font-size: 20px;
+            padding: 48px;
+        }
+        
+        footer ul {
+            display: flex;
+            justify-content: center;
+        }
+        
+        footer ul li {
+            list-style: none;
+        }
+        
+        footer ul li img {
+            height: 50px;
+            padding: 1px 2px;
+            margin: 4px 7px
+        }
+        /* utility classes */
+        
+        .edit {
+            background-color: crimson;
+            color: white;
+            border-radius: 10px;
+            padding: 5px;
+            font-size: 20px;
+        }
+        
+        #bg::before {
+            content: "";
+            height: 100%;
+            width: 100%;
+            background-color: rgb(114, 113, 113);
+            position: absolute;
+            z-index: -1;
+        }
+    </style>
+
+</head>
+
+
+
+<body>
+    <div id="navbar">
+        <div id="logo">
+            <img src="pics/my logo.png">
+        </div>
+        <ul>
+            <li><a href="respons.html">Home</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Service_(economics)">Service</a></li>
+            <li><a href="https://blog.hubspot.com/marketing/remarkable-about-us-page-examples">About Us</a></li>
+            <li><a href="https://twitter.com/?lang=en">Contact Us</a></li>
+        </ul>
+        <div class="bt">
+            <button class="btn"> <a href="https://in.linkedin.com/in/koushik-koner-28561519b" target="_blank">Contact </a></button>
+            <button class="btn"> <a href="https://www.google.com/search?q=koushik+koner&rlz=1C1GCEB_enIN960IN960&oq=koushik&aqs=chrome.1.69i57j35i39l2j46i433j46j0j0i20i263j46l3.3355j0j15&sourceid=chrome&ie=UTF-8" target="_blank">Click Here</a></button>
+        </div>
+    </div>
+    <section id="home">
+        <h1 class="primary">Welcome to my Channel</h1>
+        <p>
+            Hello guys I'm Koushik Koner I hope you all are doing well.Once you become comfortable with this,
+
+        </p>
+        <p>
+            you'll be able to find a unique style of your own.
+
+        </p>
+
+        <button class="homebt">
+            <a href="https://www.youtube.com/channel/UCvzSPnH1BX7SIVBvEzxZOyg" target="_blank">Go</a>
+        </button>
+    </section>
+    <hr>
+    <section id="container">
+        <h1 class="primary center"><span class="edit">My Introduction</span>
+        </h1>
+
+        <div id="service">
+            <div class="box">
+
+                <img src="pics/koushik logo.png">
+
+                <h2 class="secondary center">Grew Up</h2>
+                <p class="center">I grew up in Teandul.Vill:Teandul, Post Office:Teandul Pin:713424 Dist:Purba Bardhaman</p>
+            </div>
+            <div class="box">
+
+                <img src="pics/koushik logo.png">
+
+                <h2 class="secondary center">Qualification</h2>
+                <p class="center">W.B.B.S.E passed out 2016. W.B.C.H.S.E passed out 2018. Other Degrees:I,m Also A Graphic & Web Designer</p>
+            </div>
+            <div class="box">
+
+                <img src="pics/koushik logo.png">
+
+                <h2 class="secondary center">Expertise/Software Known</h2>
+                <p class="center">I Known Well html,css little bit of Javascript.Software which i know is:Illustrator,Photoshop</p>
+            </div>
+        </div>
+    </section>
+    <hr>
+    <section id="bg">
+        <section id="client-section">
+            <h1 class="center"><span class="edit">My Hobbies</span></h1>
+            <div id="clients">
+                <div class="item">
+                    <a href="https://www.holidify.com/places/kolkata/"><img src="pics/travel.png"></a>
+                </div>
+                <div class="item">
+                    <a href="https://www.justdial.com/Kolkata/Cricket-Coaching-Classes/nct-10147469"> <img src="pics/cricket.png"></a>
+                </div>
+                <div class="item">
+                    <a href="https://music.youtube.com/browse/FEmusic_language_selection"><img src="pics/music.png"></a>
+                </div>
+                <div class="item">
+                    <a href="https://www.netflix.com/in/browse/genre/34399"> <img src="pics/movie.png"></a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1 class="center"><span class="edit">Contact With Me</span>
+            </h1>
+            <section id="contact-box">
+                <form action="file:///C:/Users/uSER/Desktop/index1.html">
+                    <label for="name">
+                    Name:<input type="text" name="" placeholder="enter your name">
+                    Phone Number:<input type="number" name="" placeholder="enter your Mobile number">
+                    Email:<input type="text" name="email" placeholder="enter your email">
+                <button class="sb">Submit</button>
+
+                </label>
+                </form>
+            </section>
+        </section>
+    </section>
+
+    <footer>
+
+        <p>Copyright &copy; www.koushikkoner.com Allrights Reserved</p>
+
+        <ul>
+            <li>
+                <a href="#"><img src="pics/facebook-logo-2019-1597680-1350125.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="pics/instagram.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="pics/twitter_PNG95259.png"></a>
+            </li>
+        </ul>
+
+    </footer>
+</body>
+
+</html>
